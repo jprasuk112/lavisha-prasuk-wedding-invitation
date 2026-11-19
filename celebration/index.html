@@ -12,7 +12,7 @@
 <!-- Fonts: the page falls back to elegant system fonts if these fail to load -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&family=Story+Script&display=swap" rel="stylesheet" />
 
 <!-- Without JavaScript: skip the envelope and show everything -->
 <noscript>
@@ -42,6 +42,7 @@
 
   --serif: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
   --script: "Pinyon Script", "Snell Roundhand", "Apple Chancery", "Segoe Script", cursive;
+  --salutation: "Story Script", "Cormorant Garamond", Georgia, serif;
   --sans: "Montserrat", "Lato", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --header-h: 60px;
@@ -172,7 +173,7 @@ a { color: inherit; }
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   text-align: center;
 }
-.env-salutation { font-family: var(--script); font-size: clamp(2.3rem, 9vw, 3.1rem); line-height: 1.1; color: var(--gold-deep); }
+.env-salutation { font-family: var(--salutation); font-size: clamp(2rem, 8vw, 2.7rem); line-height: 1.1; color: var(--gold-deep); }
 .env-title { font: 400 clamp(1.45rem, 5vw, 1.9rem)/1.2 var(--serif); letter-spacing: .03em; }
 .env-note { font: italic 400 1.1rem/1.4 var(--serif); color: var(--ink-soft); }
 
@@ -400,6 +401,11 @@ a { color: inherit; }
   letter-spacing: .01em;
 }
 .names > span { display: block; }
+.names .parents {
+  margin: .5em 0 .1em;
+  font: italic 400 clamp(.95rem, 3.4vw, 1.15rem)/1.4 var(--serif);
+  letter-spacing: .02em; color: var(--ink-soft);
+}
 .names .amp {
   font-family: var(--script); font-weight: 400; color: var(--gold-deep);
   font-size: .62em; line-height: 1.1;
@@ -421,7 +427,7 @@ a { color: inherit; }
   max-width: 440px; margin: 22px auto 0; padding: 18px 8px;
   border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
 }
-.salutation { font-family: var(--script); font-size: clamp(2rem, 7vw, 2.6rem); line-height: 1.15; color: var(--gold-deep); }
+.salutation { font-family: var(--salutation); font-size: clamp(1.8rem, 6vw, 2.3rem); line-height: 1.15; color: var(--gold-deep); }
 .greeting-line { font: 400 1.18rem/1.5 var(--serif); margin-top: 4px; }
 
 /* Countdown */
@@ -1070,8 +1076,10 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
         <p class="kicker reveal">Together with our families</p>
         <h1 class="names reveal" id="hero-title" tabindex="-1" style="--delay:.1s">
           <span data-bride>Lavisha</span>
+          <span class="parents" data-bride-parents>(D/o Smt. Priya &amp; Shri Bharat Jain)</span>
           <span class="amp">&amp;</span>
           <span data-groom>Prasuk</span>
+          <span class="parents" data-groom-parents>(S/o Smt. Neelam &amp; Shri Manish Kumar Jain)</span>
         </h1>
         <p class="tagline reveal" style="--delay:.2s">We invite you to celebrate the beginning of our forever.</p>
       </div>
@@ -1113,8 +1121,8 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
         </div>
 
         <div class="countdown-wrap reveal" style="--delay:.15s" data-countdown-wrap>
-          <p class="cd-caption" data-countdown-label>Until the Sacred Phere · 05 Dec 2026 · 3:30 PM IST</p>
-          <div class="countdown" role="timer" aria-label="Time remaining until the wedding ceremony">
+          <p class="cd-caption" data-countdown-label>Until the Wedding Day · 05 Dec 2026</p>
+          <div class="countdown" role="timer" aria-label="Time remaining until the wedding day">
             <div class="cd-unit"><span class="cd-num" data-unit="days">--</span><span class="cd-label">Days</span></div>
             <div class="cd-unit"><span class="cd-num" data-unit="hours">--</span><span class="cd-label">Hours</span></div>
             <div class="cd-unit"><span class="cd-num" data-unit="minutes">--</span><span class="cd-label">Minutes</span></div>
@@ -1468,8 +1476,8 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
         <p class="closing-text">Your presence and blessings would make our celebrations complete. As we take our seven sacred steps together, we would be honoured to have you beside us.</p>
 
         <div class="countdown-wrap" data-countdown-wrap>
-          <p class="cd-caption" data-countdown-label>Until the Sacred Phere · 05 Dec 2026 · 3:30 PM IST</p>
-          <div class="countdown" role="timer" aria-label="Time remaining until the wedding ceremony">
+          <p class="cd-caption" data-countdown-label>Until the Wedding Day · 05 Dec 2026</p>
+          <div class="countdown" role="timer" aria-label="Time remaining until the wedding day">
             <div class="cd-unit"><span class="cd-num" data-unit="days">--</span><span class="cd-label">Days</span></div>
             <div class="cd-unit"><span class="cd-num" data-unit="hours">--</span><span class="cd-label">Hours</span></div>
             <div class="cd-unit"><span class="cd-num" data-unit="minutes">--</span><span class="cd-label">Minutes</span></div>
@@ -1482,8 +1490,8 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 
         <p class="thanks">Thank you for the love, laughter and blessings you bring into our lives. We can’t wait to celebrate with you.</p>
         <p class="signoff">
-          <span class="script">With love,</span>
-          <span class="names-sm"><span data-bride>Lavisha</span> &amp; <span data-groom>Prasuk</span></span>
+          <span class="script">Invited by</span>
+          <span class="names-sm">Bharat Priya Jain (Papdiwal)</span>
         </p>
         <p class="footnote" data-display-dates>04 – 05 December 2026</p>
       </div>
@@ -1665,14 +1673,16 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 const WEDDING_CONFIG = {
   couple: {
     groom: "Prasuk",
-    bride: "Lavisha"
+    bride: "Lavisha",
+    groomParents: "S/o Smt. Neelam & Shri Manish Kumar Jain",
+    brideParents: "D/o Smt. Priya & Shri Bharat Jain"
   },
 
   displayDates: "04 – 05 December 2026",
 
-  // Countdown target — the Phere, 05 December 2026, 3:30 PM India Standard Time (UTC+05:30)
-  weddingDate: "2026-12-05T15:30:00+05:30",
-  countdownLabel: "Until the Sacred Phere · 05 Dec 2026 · 3:30 PM IST",
+  // Countdown target — start of the wedding day, 05 December 2026, 12:00 AM India Standard Time (UTC+05:30)
+  weddingDate: "2026-12-05T00:00:00+05:30",
+  countdownLabel: "Until the Wedding Day · 05 Dec 2026",
 
   // The schedule — in page order. Dates & times are the official schedule.
   events: [
@@ -1939,6 +1949,8 @@ const WEDDING_CONFIG = {
   function applyCouple() {
     setText("[data-groom]", CFG.couple.groom);
     setText("[data-bride]", CFG.couple.bride);
+    setText("[data-groom-parents]", `(${CFG.couple.groomParents})`);
+    setText("[data-bride-parents]", `(${CFG.couple.brideParents})`);
     setText("[data-groom-initial]", CFG.couple.groom.charAt(0));
     setText("[data-bride-initial]", CFG.couple.bride.charAt(0));
     setText("[data-initials]", `${CFG.couple.groom.charAt(0)}\u00A0${CFG.couple.bride.charAt(0)}`);
